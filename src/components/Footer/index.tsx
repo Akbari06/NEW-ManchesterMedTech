@@ -2,7 +2,6 @@ import { Row, Col } from "antd";
 import { withTranslation, TFunction } from "react-i18next";
 import { SvgIcon } from "../../common/SvgIcon";
 import Container from "../../common/Container";
-
 import i18n from "i18next";
 import {
   FooterSection,
@@ -10,15 +9,11 @@ import {
   Label,
   LanguageSwitch,
   LanguageSwitchContainer,
-  Title,
   Large,
   Para,
   Chat,
-  Empty,
   Extra,
-  NavLink,
   FooterContainer,
-  LogoContainer,
 } from "./styles";
 
 interface SocialLinkProps {
@@ -53,9 +48,9 @@ const Footer = ({ t }: { t: TFunction }) => {
             <Col lg={12} md={12} sm={24} xs={24}>
               <Language>{t("Contact")}</Language>
               <Large to="/">{t("Tell us everything")}</Large>
-              <Para>{t(`Do you have any question? Feel free to reach out.`)}</Para>
+              <Para>{t("Do you have any question? Feel free to reach out.")}</Para>
               <a href="mailto:akbarishtiaque@gmail.com">
-                <Chat>{t(`Let's Chat`)}</Chat>
+                <Chat>{t("Let's Chat")}</Chat>
               </a>
             </Col>
             <Col lg={12} md={12} sm={24} xs={24}>
@@ -82,32 +77,20 @@ const Footer = ({ t }: { t: TFunction }) => {
           </Row>
         </Container>
       </FooterSection>
-
       <Extra>
         <Container border={true}>
-          <Row
-            justify="space-between"
-            align="middle"
-            style={{ paddingTop: "3rem" }}
-          >
-            <NavLink to="/">
-              <LogoContainer>
-                <SvgIcon
-                  src="logo.svg"
-                  aria-label="homepage"
-                  width="101px"
-                  height="64px"
-                />
-              </LogoContainer>
-            </NavLink>
+          <Row justify="center" align="middle" style={{ paddingTop: "3rem" }}>
             <FooterContainer>
               <SocialLink
-                href="https://github.com/Adrinlol/create-react-app-adrinlol"
-                src="github.svg"
+                href="https://www.instagram.com/manchestermedtech/?hl=en"
+                src="instagram.svg"
               />
-              <SocialLink href="https://twitter.com/Adrinlolx" src="twitter.svg" />
               <SocialLink
-                href="https://www.linkedin.com/in/lasha-kakabadze/"
+                href="https://www.facebook.com/manchestermedtech"
+                src="facebook.svg"
+              />
+              <SocialLink
+                href="https://www.linkedin.com/company/manchester-medtech/posts/?feedView=all"
                 src="linkedin.svg"
               />
             </FooterContainer>

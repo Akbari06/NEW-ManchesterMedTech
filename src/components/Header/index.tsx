@@ -42,13 +42,17 @@ const Header = ({ t }: { t: TFunction }) => {
           <Span>{t("Product")}</Span>
         </CustomNavLinkSmall>
         <CustomNavLinkSmall
-          style={{ width: "180px" }}
-          onClick={() => scrollTo("contact")}
-        >
-          <Span>
-            <Button>{t("Newsletter")}</Button>
-          </Span>
-        </CustomNavLinkSmall>
+  style={{ width: "180px" }}
+  as="a"
+  href="https://docs.google.com/forms/d/e/1FAIpQLScsudvBrkdO99Jmf6ctEFwY-a_bhi54Eek5Cm0VUelsUa3pdg/viewform"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <Span>
+    <Button>{t("Newsletter")}</Button>
+  </Span>
+</CustomNavLinkSmall>
+
       </>
     );
   };
