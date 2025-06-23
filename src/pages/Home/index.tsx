@@ -19,8 +19,7 @@ const Home = () => {
       <ContentBlock
         direction="right"
         title={IntroContent.title}
-        content={IntroContent.text}
-        button={IntroContent.button}
+        content={IntroContent.text}  
         icon="developer.svg"
         id="intro"
       />
@@ -33,7 +32,7 @@ const Home = () => {
         direction="left"
         title={AboutContent.title}
         content={AboutContent.text}
-        section={AboutContent.section}
+        // section={AboutContent.section}
         icon="graphs.svg"
         id="about"
       />
@@ -53,7 +52,7 @@ const Home = () => {
       />
       <Contact
         title={ContactContent.title}
-        content={ContactContent.text}
+        content = ""
         id="contact"
       />
     </Container>

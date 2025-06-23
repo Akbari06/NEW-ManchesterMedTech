@@ -4,16 +4,17 @@ import { MenuOutlined } from "@ant-design/icons";
 
 export const HeaderSection = styled("header")`
   padding: 1rem 0.5rem;
-
   .ant-row-space-between {
     align-items: center;
     text-align: center;
+    justify-content: center; /* Center the content */
   }
 `;
 
-export const LogoContainer = styled(Link)`
-  display: flex;
-`;
+// Remove or comment out LogoContainer since you don't need it anymore
+// export const LogoContainer = styled(Link)`
+//   display: flex;
+// `;
 
 export const NavLink = styled("div")`
   display: inline-block;
@@ -23,11 +24,9 @@ export const NavLink = styled("div")`
 export const CustomNavLink = styled("div")`
   width: 203px;
   display: inline-block;
-
   @media only screen and (max-width: 411px) {
     width: 150px;
   }
-
   @media only screen and (max-width: 320px) {
     width: 118px;
   }
@@ -37,9 +36,7 @@ export const Burger = styled("div")`
   @media only screen and (max-width: 890px) {
     display: block;
   }
-
   display: none;
-
   svg {
     fill: #2e186a;
   }
@@ -49,6 +46,11 @@ export const NotHidden = styled("div")`
   @media only screen and (max-width: 890px) {
     display: none;
   }
+  /* Center the navigation items */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem; /* Add some spacing between nav items */
 `;
 
 export const Menu = styled("h5")`
@@ -62,7 +64,6 @@ export const CustomNavLinkSmall = styled(NavLink)`
   color: #18216d;
   transition: color 0.2s ease-in;
   margin: 0.5rem 2rem;
-
   @media only screen and (max-width: 768px) {
     margin: 1.25rem 2rem;
   }
@@ -84,7 +85,6 @@ export const Outline = styled(MenuOutlined)`
 export const Span = styled("span")`
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-
   &:hover,
   &:active,
   &:focus {

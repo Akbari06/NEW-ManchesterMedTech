@@ -2,11 +2,9 @@ import { useState } from "react";
 import { Row, Col, Drawer } from "antd";
 import { withTranslation, TFunction } from "react-i18next";
 import Container from "../../common/Container";
-import { SvgIcon } from "../../common/SvgIcon";
 import { Button } from "../../common/Button";
 import {
   HeaderSection,
-  LogoContainer,
   Burger,
   NotHidden,
   Menu,
@@ -18,11 +16,11 @@ import {
 
 const Header = ({ t }: { t: TFunction }) => {
   const [visible, setVisibility] = useState(false);
-
+  
   const toggleButton = () => {
     setVisibility(!visible);
   };
-
+  
   const MenuItem = () => {
     const scrollTo = (id: string) => {
       const element = document.getElementById(id) as HTMLDivElement;
@@ -31,6 +29,7 @@ const Header = ({ t }: { t: TFunction }) => {
       });
       setVisibility(false);
     };
+    
     return (
       <>
         <CustomNavLinkSmall onClick={() => scrollTo("about")}>
@@ -47,20 +46,17 @@ const Header = ({ t }: { t: TFunction }) => {
           onClick={() => scrollTo("contact")}
         >
           <Span>
-            <Button>{t("Contact")}</Button>
+            <Button>{t("Newsletter")}</Button>
           </Span>
         </CustomNavLinkSmall>
       </>
     );
   };
-
+  
   return (
     <HeaderSection>
       <Container>
-        <Row justify="space-between">
-          <LogoContainer to="/" aria-label="homepage">
-            <SvgIcon src="logo.svg" width="101px" height="64px" />
-          </LogoContainer>
+        <Row justify="center" align="middle">
           <NotHidden>
             <MenuItem />
           </NotHidden>
